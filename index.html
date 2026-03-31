@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cre8tion — Coming Soon</title>
+  <title>Cre8tion — Creating tomorrow, today.</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
@@ -15,7 +16,7 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #f9fafb;
+      background: #fdfdfd;
       color: #111827;
       display: flex;
       align-items: center;
@@ -25,127 +26,169 @@
       padding: 30px;
     }
 
+    /* Added a subtle fade-in animation for a premium feel */
     .container {
-      max-width: 600px;
+      max-width: 650px;
       width: 100%;
+      animation: fadeIn 1s ease-out forwards;
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .logo {
-      width: 130px;
+      width: 140px;
       height: auto;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     h1 {
-      font-size: 2.6rem;
-      font-weight: 400;
+      font-size: 2.5rem;
+      font-weight: 600;
       color: #111827;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       letter-spacing: -0.5px;
     }
 
+    .status {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #f27047; /* Matches the orange in your logo */
+      font-weight: 600;
+      margin-bottom: 20px;
+      display: block;
+    }
+
     .tagline {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: #6b7280;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
+      font-weight: 300;
+      line-height: 1.6;
     }
 
     .features {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 50px;
       flex-wrap: wrap;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
     }
 
     .feature {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .feature-icon {
-      font-size: 22px;
-      margin-bottom: 8px;
+    .feature-icon i {
+      font-size: 26px;
+      margin-bottom: 12px;
+      /* Gradient matching the CRE8TION logo */
+      background: linear-gradient(135deg, #2b82d4, #f27047);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .feature-title {
       font-size: 0.95rem;
-      color: #1f2937;
+      color: #374151;
       font-weight: 500;
+    }
+
+    /* Divider to separate content from footer elements */
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: #e5e7eb;
+      margin: 0 auto 35px auto;
     }
 
     .socials {
       display: flex;
       justify-content: center;
       gap: 25px;
-      margin-top: 30px;
     }
 
     .socials a {
-      font-size: 22px;
+      font-size: 20px;
       color: #9ca3af;
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .socials a:hover {
-      color: #4b5563;
+      color: #2b82d4; /* Matches the blue in your logo */
+      transform: translateY(-2px);
     }
 
     .contact {
       font-size: 0.95rem;
       color: #6b7280;
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
     .contact a {
-      color: #6b7280;
+      color: #111827;
+      font-weight: 500;
       text-decoration: none;
-      border-bottom: 1px solid transparent;
+      border-bottom: 1px solid #d1d5db;
+      padding-bottom: 2px;
+      transition: border-color 0.3s ease;
     }
 
     .contact a:hover {
-      border-color: #6b7280;
+      border-color: #f27047;
     }
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
-
       .tagline {
         font-size: 1rem;
       }
-
       .features {
-        gap: 25px;
+        gap: 30px;
       }
     }
   </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
     <img src="logo.png" alt="Cre8tion" class="logo" />
-    <h1>Coming Soon</h1>
-    <p class="tagline">Design. Digital Media. Development.</p>
-
+    
+    <span class="status">Coming Soon</span>
+    <h1>Creating tomorrow, today.</h1>
+    <p class="tagline">We are building our new digital experience.<br>Design &bull; Digital Media &bull; Development</p>
+    
     <div class="features">
       <div class="feature">
-        <div class="feature-icon">✨</div>
+        <div class="feature-icon"><i class="fas fa-pen-nib"></i></div>
         <div class="feature-title">Creative Design</div>
       </div>
       <div class="feature">
-        <div class="feature-icon">📱</div>
+        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
         <div class="feature-title">App Development</div>
       </div>
       <div class="feature">
-        <div class="feature-icon">🎬</div>
+        <div class="feature-icon"><i class="fas fa-video"></i></div>
         <div class="feature-title">Digital Media</div>
       </div>
     </div>
 
+    <div class="divider"></div>
+
     <div class="socials">
-      <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://x.com" aria-label="X"><i class="fab fa-twitter"></i></a>
     </div>
