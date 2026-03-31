@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cre8tion — Creating tomorrow, today.</title>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
@@ -23,12 +22,11 @@
       justify-content: center;
       min-height: 100vh;
       text-align: center;
-      padding: 30px;
+      padding: 40px 20px;
     }
 
-    /* Added a subtle fade-in animation for a premium feel */
     .container {
-      max-width: 650px;
+      max-width: 700px;
       width: 100%;
       animation: fadeIn 1s ease-out forwards;
       opacity: 0;
@@ -43,43 +41,43 @@
     }
 
     .logo {
-      width: 140px;
+      width: 150px;
       height: auto;
-      margin-bottom: 30px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      color: #111827;
-      margin-bottom: 12px;
-      letter-spacing: -0.5px;
+      margin-bottom: 40px; /* Increased spacing */
     }
 
     .status {
       font-size: 0.9rem;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #f27047; /* Matches the orange in your logo */
+      color: #f27047;
       font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 25px; /* Increased spacing */
       display: block;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 15px;
+      letter-spacing: -0.5px;
     }
 
     .tagline {
       font-size: 1.15rem;
       color: #6b7280;
-      margin-bottom: 45px;
+      margin-bottom: 60px; /* Increased spacing for neatness */
       font-weight: 300;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .features {
       display: flex;
       justify-content: center;
-      gap: 50px;
+      gap: 60px; /* Increased gap between feature items */
       flex-wrap: wrap;
-      margin-bottom: 45px;
+      margin-bottom: 60px;
     }
 
     .feature {
@@ -89,51 +87,55 @@
       align-items: center;
     }
 
-    .feature-icon i {
-      font-size: 26px;
-      margin-bottom: 12px;
-      /* Gradient matching the CRE8TION logo */
-      background: linear-gradient(135deg, #2b82d4, #f27047);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .feature-icon {
+      margin-bottom: 16px;
+    }
+
+    .feature-icon svg {
+      width: 32px;
+      height: 32px;
     }
 
     .feature-title {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #374151;
       font-weight: 500;
     }
 
-    /* Divider to separate content from footer elements */
     .divider {
-      width: 40px;
+      width: 50px;
       height: 2px;
       background: #e5e7eb;
-      margin: 0 auto 35px auto;
+      margin: 0 auto 40px auto;
     }
 
     .socials {
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 30px; /* Neater spacing for socials */
     }
 
     .socials a {
-      font-size: 20px;
       color: #9ca3af;
-      text-decoration: none;
       transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .socials a svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
     }
 
     .socials a:hover {
-      color: #2b82d4; /* Matches the blue in your logo */
-      transform: translateY(-2px);
+      color: #2b82d4;
+      transform: translateY(-3px);
     }
 
     .contact {
       font-size: 0.95rem;
       color: #6b7280;
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     .contact a {
@@ -151,18 +153,25 @@
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 1.8rem;
-      }
-      .tagline {
-        font-size: 1rem;
+        font-size: 2rem;
       }
       .features {
-        gap: 30px;
+        gap: 40px;
       }
     }
   </style>
 </head>
 <body>
+
+  <svg width="0" height="0" style="position:absolute;">
+    <defs>
+      <linearGradient id="cre8-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#2b82d4" />
+        <stop offset="100%" stop-color="#f27047" />
+      </linearGradient>
+    </defs>
+  </svg>
+
   <div class="container">
     <img src="logo.png" alt="Cre8tion" class="logo" />
     
@@ -172,15 +181,31 @@
     
     <div class="features">
       <div class="feature">
-        <div class="feature-icon"><i class="fas fa-pen-nib"></i></div>
+        <div class="feature-icon">
+          <svg fill="none" stroke="url(#cre8-gradient)" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.89 1.147l-2.848.711a.75.75 0 01-.9-.9l.711-2.848a4.5 4.5 0 011.146-1.89l13.816-13.816z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 7.125L16.862 4.487" />
+          </svg>
+        </div>
         <div class="feature-title">Creative Design</div>
       </div>
+
       <div class="feature">
-        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+        <div class="feature-icon">
+          <svg fill="none" stroke="url(#cre8-gradient)" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+          </svg>
+        </div>
         <div class="feature-title">App Development</div>
       </div>
+
       <div class="feature">
-        <div class="feature-icon"><i class="fas fa-video"></i></div>
+        <div class="feature-icon">
+          <svg fill="none" stroke="url(#cre8-gradient)" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+          </svg>
+        </div>
         <div class="feature-title">Digital Media</div>
       </div>
     </div>
@@ -188,9 +213,21 @@
     <div class="divider"></div>
 
     <div class="socials">
-      <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://x.com" aria-label="X"><i class="fab fa-twitter"></i></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+      </a>
+      <a href="https://instagram.com" aria-label="Instagram">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+      </a>
+      <a href="https://x.com" aria-label="X">
+        <svg viewBox="0 0 24 24">
+          <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+        </svg>
+      </a>
     </div>
 
     <div class="contact">
